@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SAMS.Models.CourseUnit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<h2>Course Units</h2>
+<p>
+    @Html.ActionLink("Add Course Unit", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th width="400px">
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credits)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(Modelitem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(Modelitem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(Modelitem => item.Credits)
+        </td>
+        <td>
+            @Html.ActionLink("Details","Details",new {id = item.Id }) | 
+            @Html.ActionLink("Edit","Edit",new { id = item.Id})
+        </td>
+
+    </tr>
+    }
+
+
+
+</table>

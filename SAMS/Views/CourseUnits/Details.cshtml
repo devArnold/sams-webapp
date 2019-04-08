@@ -1,0 +1,35 @@
+﻿@model SAMS.Models.CourseUnit
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<hr/>
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Id)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Id)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Title)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Title)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Credits)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Credits)
+    </dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Edit","Edit") |
+    @Html.ActionLink("Back","Index")
+</p>
